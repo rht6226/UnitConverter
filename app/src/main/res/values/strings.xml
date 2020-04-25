@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Unit Converter</string>
+    <string name="conversion_name">Metres to Inches</string>
+    <string name="button_text">convert</string>
+    <string name="values_in_m">Enter value in metres : </string>
+    <string name="desc">Logo</string>
+    <string name="clear_text">Clear</string>
+    <string name="metres">metres</string>
+</resources>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="351dp"
+        android:layout_height="92dp"
+        android:padding="@dimen/padding_std"
+        android:paddingStart="@dimen/padding_std"
+        android:paddingLeft="@dimen/padding_std"
+        android:paddingTop="@dimen/padding_std"
+        android:paddingEnd="@dimen/padding_std"
+        android:paddingRight="@dimen/padding_std"
+        android:paddingBottom="@dimen/padding_std"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TableRow
+        android:id="@+id/row1"
+        android:layout_width="411dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="2dp"
+        android:padding="@dimen/padding_row"
+        android:paddingStart="@dimen/padding_row"
+        android:paddingLeft="@dimen/padding_row"
+        android:paddingTop="@dimen/padding_row"
+        android:paddingEnd="@dimen/padding_row"
+        android:paddingRight="@dimen/padding_row"
+        android:paddingBottom="@dimen/padding_row"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="186dp"
+            android:layout_height="117dp"
+            android:contentDescription="@string/desc"
+            app:srcCompat="@drawable/converter" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="210dp"
+            android:layout_height="121dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/conversion_name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            android:visibility="visible"
+            tools:visibility="visible" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row2"
+        android:layout_width="416dp"
+        android:layout_height="138dp"
+        android:padding="40dp"
+        android:paddingStart="12dp"
+        android:paddingTop="@dimen/padding_row"
+        android:paddingEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row1">
+
+        <EditText
+            android:id="@+id/metreVal"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/values_in_m"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/unit_value"
+            android:layout_width="93dp"
+            android:layout_height="48dp"
+            android:padding="@dimen/padding_std"
+            android:paddingStart="@dimen/padding_std"
+            android:paddingLeft="@dimen/padding_std"
+            android:paddingTop="@dimen/padding_std"
+            android:paddingEnd="@dimen/padding_std"
+            android:paddingRight="@dimen/padding_std"
+            android:paddingBottom="@dimen/padding_std"
+            android:text="@string/metres"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="414dp"
+        android:layout_height="73dp"
+        android:paddingStart="@dimen/padding_std"
+        android:paddingTop="@dimen/padding_std"
+        android:paddingEnd="@dimen/padding_std"
+        android:paddingBottom="@dimen/padding_std"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row2">
+
+        <Button
+            android:id="@+id/converter"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_text" />
+
+        <Button
+            android:id="@+id/clear_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/clear_text" />
+    </TableRow>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
